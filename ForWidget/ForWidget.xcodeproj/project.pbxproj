@@ -57,6 +57,7 @@
 		C3A793152D2BA6AB00BE88DD /* ForWidgetExtensionExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ForWidgetExtensionExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3A793172D2BA6AB00BE88DD /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		C3A793192D2BA6AB00BE88DD /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		C3E71D742D2BEED900F4A24B /* ForWidgetExtensionExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ForWidgetExtensionExtension.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -67,22 +68,49 @@
 			);
 			target = C3A793142D2BA6AB00BE88DD /* ForWidgetExtensionExtension */;
 		};
+		C3A793352D2BA6CF00BE88DD /* Exceptions for "ForWidget" folder in "ForWidget" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Tests/ForWidgetTests/ForWidgetTests.swift,
+				Tests/ForWidgetUITests/ForWidgetUITests.swift,
+				Tests/ForWidgetUITests/ForWidgetUITestsLaunchTests.swift,
+			);
+			target = C3A792D42D2BA37700BE88DD /* ForWidget */;
+		};
+		C3A793362D2BA6CF00BE88DD /* Exceptions for "ForWidget" folder in "ForWidgetTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Tests/ForWidgetTests/ForWidgetTests.swift,
+			);
+			target = C3A792E42D2BA37900BE88DD /* ForWidgetTests */;
+		};
+		C3A7933C2D2BA6D100BE88DD /* Exceptions for "ForWidget" folder in "ForWidgetUITests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Tests/ForWidgetUITests/ForWidgetUITests.swift,
+				Tests/ForWidgetUITests/ForWidgetUITestsLaunchTests.swift,
+			);
+			target = C3A792EE2D2BA37900BE88DD /* ForWidgetUITests */;
+		};
+		C3E71D782D2BF6C000F4A24B /* Exceptions for "ForWidget" folder in "ForWidgetExtensionExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Utility.swift,
+			);
+			target = C3A793142D2BA6AB00BE88DD /* ForWidgetExtensionExtension */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		C3A792D72D2BA37700BE88DD /* ForWidget */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				C3A793352D2BA6CF00BE88DD /* Exceptions for "ForWidget" folder in "ForWidget" target */,
+				C3E71D782D2BF6C000F4A24B /* Exceptions for "ForWidget" folder in "ForWidgetExtensionExtension" target */,
+				C3A793362D2BA6CF00BE88DD /* Exceptions for "ForWidget" folder in "ForWidgetTests" target */,
+				C3A7933C2D2BA6D100BE88DD /* Exceptions for "ForWidget" folder in "ForWidgetUITests" target */,
+			);
 			path = ForWidget;
-			sourceTree = "<group>";
-		};
-		C3A792E82D2BA37900BE88DD /* ForWidgetTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = ForWidgetTests;
-			sourceTree = "<group>";
-		};
-		C3A792F22D2BA37900BE88DD /* ForWidgetUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = ForWidgetUITests;
 			sourceTree = "<group>";
 		};
 		C3A7931B2D2BA6AB00BE88DD /* ForWidgetExtension */ = {
@@ -132,9 +160,8 @@
 		C3A792CC2D2BA37700BE88DD = {
 			isa = PBXGroup;
 			children = (
+				C3E71D742D2BEED900F4A24B /* ForWidgetExtensionExtension.entitlements */,
 				C3A792D72D2BA37700BE88DD /* ForWidget */,
-				C3A792E82D2BA37900BE88DD /* ForWidgetTests */,
-				C3A792F22D2BA37900BE88DD /* ForWidgetUITests */,
 				C3A7931B2D2BA6AB00BE88DD /* ForWidgetExtension */,
 				C3A793162D2BA6AB00BE88DD /* Frameworks */,
 				C3A792D62D2BA37700BE88DD /* Products */,
@@ -201,9 +228,6 @@
 			dependencies = (
 				C3A792E72D2BA37900BE88DD /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				C3A792E82D2BA37900BE88DD /* ForWidgetTests */,
-			);
 			name = ForWidgetTests;
 			packageProductDependencies = (
 			);
@@ -223,9 +247,6 @@
 			);
 			dependencies = (
 				C3A792F12D2BA37900BE88DD /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				C3A792F22D2BA37900BE88DD /* ForWidgetUITests */,
 			);
 			name = ForWidgetUITests;
 			packageProductDependencies = (
@@ -297,9 +318,9 @@
 			projectRoot = "";
 			targets = (
 				C3A792D42D2BA37700BE88DD /* ForWidget */,
+				C3A793142D2BA6AB00BE88DD /* ForWidgetExtensionExtension */,
 				C3A792E42D2BA37900BE88DD /* ForWidgetTests */,
 				C3A792EE2D2BA37900BE88DD /* ForWidgetUITests */,
-				C3A793142D2BA6AB00BE88DD /* ForWidgetExtensionExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -509,9 +530,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ForWidget/ForWidget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ForWidget/Preview Content\"";
+				DEVELOPMENT_TEAM = UF3R52LYV7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -537,9 +560,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ForWidget/ForWidget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ForWidget/Preview Content\"";
+				DEVELOPMENT_TEAM = UF3R52LYV7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -633,8 +658,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = ForWidgetExtensionExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UF3R52LYV7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ForWidgetExtension/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = ForWidgetExtension;
@@ -659,8 +686,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = ForWidgetExtensionExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UF3R52LYV7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ForWidgetExtension/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = ForWidgetExtension;

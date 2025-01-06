@@ -8,12 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var countNum = 0
+    var sharedFunctions = SharedFunctions()
+    
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Text("\(countNum)")
+                .font(.largeTitle)
+            
+            Button("Increment") {
+                countNum = sharedFunctions.saveNumber(number: countNum)
+            }
         }
         .padding()
     }
